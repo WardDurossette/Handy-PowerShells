@@ -1,0 +1,1 @@
+Get-ADGroupMember "CopyFromADGroup" |  Get-ADUser | Foreach-Object {Add-ADGroupMember -Identity "CopyToADGroup" -Members $_}
